@@ -1,0 +1,6 @@
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogic\bin\Debug\PokerGameLogic.dll
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogic\bin\Debug\PokerGameLogic.pdb
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogic\obj\Debug\PokerGameLogic.csproj.AssemblyReference.cache
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogic\obj\Debug\PokerGameLogic.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogic\obj\Debug\PokerGameLogic.dll
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogic\obj\Debug\PokerGameLogic.pdb

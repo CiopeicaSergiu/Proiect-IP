@@ -1,0 +1,6 @@
+C:\Users\sergi\Desktop\Proiect-PI\SocketsComunication\bin\Debug\SocketsComunication.dll
+C:\Users\sergi\Desktop\Proiect-PI\SocketsComunication\bin\Debug\SocketsComunication.pdb
+C:\Users\sergi\Desktop\Proiect-PI\SocketsComunication\obj\Debug\SocketsComunication.csproj.AssemblyReference.cache
+C:\Users\sergi\Desktop\Proiect-PI\SocketsComunication\obj\Debug\SocketsComunication.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Desktop\Proiect-PI\SocketsComunication\obj\Debug\SocketsComunication.dll
+C:\Users\sergi\Desktop\Proiect-PI\SocketsComunication\obj\Debug\SocketsComunication.pdb

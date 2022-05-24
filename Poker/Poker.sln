@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerGameLogic", "..\PokerG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketsComunication", "..\SocketsComunication\SocketsComunication.csproj", "{D196CE9E-ABCA-4264-AE29-35FFEC841821}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerGameLogicTests", "..\PokerGameLogicTests\PokerGameLogicTests.csproj", "{DACC32C6-FA72-4745-9727-24E6836FB9B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D196CE9E-ABCA-4264-AE29-35FFEC841821}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D196CE9E-ABCA-4264-AE29-35FFEC841821}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D196CE9E-ABCA-4264-AE29-35FFEC841821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DACC32C6-FA72-4745-9727-24E6836FB9B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DACC32C6-FA72-4745-9727-24E6836FB9B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DACC32C6-FA72-4745-9727-24E6836FB9B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DACC32C6-FA72-4745-9727-24E6836FB9B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

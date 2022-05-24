@@ -1,0 +1,17 @@
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\bin\Debug\PokerGameLogicTests.dll
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\bin\Debug\PokerGameLogicTests.pdb
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\bin\Debug\PokerGameLogic.dll
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\bin\Debug\PokerGameLogic.pdb
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\obj\Debug\PokerGameLogicTests.csproj.AssemblyReference.cache
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\obj\Debug\PokerGameLogicTests.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\obj\Debug\PokerGameLogicTests.csproj.CopyComplete
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\obj\Debug\PokerGameLogicTests.dll
+C:\Users\sergi\Desktop\Proiect-PI\PokerGameLogicTests\obj\Debug\PokerGameLogicTests.pdb

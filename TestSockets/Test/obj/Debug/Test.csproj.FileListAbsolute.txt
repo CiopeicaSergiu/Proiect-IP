@@ -1,0 +1,11 @@
+C:\Users\sergi\Desktop\TestSockets\Test\bin\Debug\Test.exe.config
+C:\Users\sergi\Desktop\TestSockets\Test\bin\Debug\Test.exe
+C:\Users\sergi\Desktop\TestSockets\Test\bin\Debug\Test.pdb
+C:\Users\sergi\Desktop\TestSockets\Test\obj\Debug\Test.csproj.AssemblyReference.cache
+C:\Users\sergi\Desktop\TestSockets\Test\obj\Debug\Test.csproj.SuggestedBindingRedirects.cache
+C:\Users\sergi\Desktop\TestSockets\Test\obj\Debug\Test.Properties.Resources.resources
+C:\Users\sergi\Desktop\TestSockets\Test\obj\Debug\Test.csproj.GenerateResource.cache
+C:\Users\sergi\Desktop\TestSockets\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Desktop\TestSockets\Test\obj\Debug\Test.exe
+C:\Users\sergi\Desktop\TestSockets\Test\obj\Debug\Test.pdb
+C:\Users\sergi\Desktop\TestSockets\Test\obj\Debug\Test.Aplicatie.resources

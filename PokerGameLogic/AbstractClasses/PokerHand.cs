@@ -35,8 +35,9 @@ namespace PokerGameLogic.AbstractClasses
         public string RankingToString()
         {
             string result = "";
-            foreach (var card in hand)
-                result+=card.GetCard() + "\r\n";
+            for (int i=0; i<hand.Count-1; i++)
+                result+=hand[i].GetCard() + ",";
+            result += hand[hand.Count - 1].GetCard();
             return cardRanks+result;
         }
 

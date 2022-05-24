@@ -11,10 +11,42 @@ namespace Poker
         private Client _client = null;
         private Queue<string> _messagesIn = new Queue<string>();
         private Queue<string> _messagesOut = new Queue<string>();
+        private List<int> _players = new List<int>() {-1, -1, -1, -1, -1};
+        private int _discardedCards = 0;
         public NewGame()
         {
             InitializeComponent();
             _client = new Client(_messagesIn, _messagesOut);
+            while (true)
+            {
+                if (_messagesIn.Count != 0)
+                {
+                    
+                    int value;
+                    try
+                    {
+                        string myMsg = _messagesIn.Dequeue();
+                        string []msg = myMsg.Split(',');
+                       
+                        /*
+                        MessageBox.Show(msg);
+                        value = int.Parse(msg);
+                        _players[0] = value;
+                        */
+                        for (int i = 0; i < msg.Length; i++)
+                                _players[i] = int.Parse(msg[i]);
+                        break;
+                    }
+                    catch (Exception ex)
+                    { 
+                        
+                    }
+                   
+                    //string msg = _messagesIn.Dequeue();
+                    //MessageBox.Show(msg);
+
+                }
+            }
         }
 
         private void Back(object sender, EventArgs e)
@@ -54,6 +86,7 @@ namespace Poker
 
         private void ShowCards(object sender, MouseEventArgs e)
         {
+            _discardedCards = 0;
             //Card 1
             if (_cardPictureBox1.Image == null)
             {
@@ -147,7 +180,7 @@ namespace Poker
 
 
             //_textBoxCards.Text = _handRanking[j].RankingToString();
-            _messagesOut.Enqueue(_handRanking[j].RankingToString());
+            _messagesOut.Enqueue(_players[0].ToString()+":"+_handRanking[j].RankingToString());
             _handRanking[j].Clear();
 
             /*
@@ -165,14 +198,19 @@ namespace Poker
         {
             if (_cardPictureBox1.Image != null)
             {
-                _cardPictureBox1.BackColor = Color.Black;
-                _cardPictureBox1.Image = null;
+                if (_discardedCards <= 2)
+                {
+                    _cardPictureBox1.BackColor = Color.Black;
+                    _cardPictureBox1.Image = null;
+                    ++_discardedCards;
+                }
                 
             }
             else if (_hand.Count > 0)
                 {
                     _cardPictureBox1.BackColor = Color.Transparent;
                     _cardPictureBox1.Image = _hand[0].Bitmap;
+                    --_discardedCards;
                 }
 
             
@@ -181,84 +219,152 @@ namespace Poker
 
         private void MarkForDiscard2(object sender, EventArgs e)
         {
-            if (_cardPictureBox2.Image != null)
+            if ( _cardPictureBox2.Image != null)
             {
-                _cardPictureBox2.BackColor = Color.Black;
-                _cardPictureBox2.Image = null;
+                if (_discardedCards <= 2)
+                {
+                    _cardPictureBox2.BackColor = Color.Black;
+                    _cardPictureBox2.Image = null;
+                    ++_discardedCards;
+                }
             }
             else if (_hand.Count > 0)
                 {
                     _cardPictureBox2.BackColor = Color.Transparent;
                     _cardPictureBox2.Image = _hand[1].Bitmap;
-                    
-                }
+                 --_discardedCards;
+
+            }
             _cardPictureBox2.Update();
         }
 
         private void MarkForDiscard3(object sender, EventArgs e)
         {
-            if (_cardPictureBox3.Image != null)
+            if ( _cardPictureBox3.Image != null)
             {
-                _cardPictureBox3.BackColor = Color.Black;
-                _cardPictureBox3.Image = null;
+                if (_discardedCards <= 2)
+                {
+                    _cardPictureBox3.BackColor = Color.Black;
+                    _cardPictureBox3.Image = null;
+                    ++_discardedCards;
+                }
             }
             else if (_hand.Count > 0)
                 {
                     _cardPictureBox3.BackColor = Color.Transparent;
                     _cardPictureBox3.Image = _hand[2].Bitmap;
-                    
-                }
+                --_discardedCards;
+
+            }
             _cardPictureBox3.Update();
 
         }
 
         private void MarkForDiscard4(object sender, EventArgs e)
         {
-            if (_cardPictureBox4.Image != null)
+            if ( _cardPictureBox4.Image != null)
             {
-                _cardPictureBox4.BackColor = Color.Black;
-                _cardPictureBox4.Image = null;
+                if (_discardedCards <= 2)
+                {
+                    _cardPictureBox4.BackColor = Color.Black;
+                    _cardPictureBox4.Image = null;
+                    ++_discardedCards;
+                }
             }
             else if (_hand.Count > 0)
                 {
                     _cardPictureBox4.BackColor = Color.Transparent;
                     _cardPictureBox4.Image = _hand[3].Bitmap;
-                    
-                }
+                --_discardedCards;
+
+            }
             _cardPictureBox4.Update();
 
         }
 
         private void MarkForDiscard5(object sender, EventArgs e)
         {
-            if (_cardPictureBox5.Image != null)
+            if ( _cardPictureBox5.Image != null)
             {
-                _cardPictureBox5.BackColor = Color.Black;
-                _cardPictureBox5.Image = null;
+                if (_discardedCards <= 2)
+                {
+                    _cardPictureBox5.BackColor = Color.Black;
+                    _cardPictureBox5.Image = null;
+                    ++_discardedCards;
+                }
             }
             else if (_hand.Count > 0)
             {
                 _cardPictureBox5.BackColor = Color.Transparent;
                 _cardPictureBox5.Image = _hand[4].Bitmap;
-                    
+                --_discardedCards;
+
             }
             _cardPictureBox5.Update();
         }
 
+        private int FindFreeSeat()
+        {
+            for (int i = 0; i < _players.Count; i++)
+                if (_players[i] == -1)
+                    return i;
+            return -1;
+        }
+
+        private void DisconnectUser(int user)
+        {
+            for (int i = 0; i < _players.Count; i++)
+            {
+                if (_players[i]==user)
+                {
+                    _players[i] = -1;
+                    return;
+                }
+            }
+        }
+
         private void ShowCardsOnChatBox(object sender, EventArgs e)
         {
-            string message = _messagesIn.Dequeue();
-            string[] messageParts = message.Split(':');
-            int player = int.Parse(messageParts[0]);
-            switch (player)
-            {
-                case 1:
-                    _textBoxCards.Text = messageParts[1];
-                    break;
-                case 2:
-                    _textBoxCards2.Text = messageParts[1];
-                    break;
 
+
+            if (_messagesIn.Count != 0)
+            {
+
+
+                string message = _messagesIn.Dequeue();
+                string[] messageParts = message.Split(':');
+                int player;
+                try
+                {
+                    player = int.Parse(messageParts[0]);
+                }
+                catch (Exception exception)
+                {
+                    return;
+                }
+
+                if (messageParts.Length == 1)
+                    _players[0] = player;
+                else
+                if (messageParts[1] == "connect" && _players[0] != player)
+                {
+                    int pos = FindFreeSeat();
+                    if (pos != -1)
+                        _players[pos] = player;
+
+                }
+                else if (messageParts[1] == "disconnect")
+                {
+                    DisconnectUser(player);
+                }
+                else
+                if (messageParts[1] != "connect")
+                {
+                    if (player == _players[0])
+                        _textBoxCards.Text = messageParts[1] + ":" + messageParts[2];
+                    else if (player == _players[1])
+                        _textBoxCards2.Text = messageParts[1] + ":" + messageParts[2];
+                }
             }
             
         }

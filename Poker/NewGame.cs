@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using PokerGameLogic;
 using SocketsComunication;
+using PokerGameLogic.Interfaces;
 namespace Poker
 {
     public partial class NewGame : Form
@@ -13,6 +14,7 @@ namespace Poker
         private Queue<string> _messagesOut = new Queue<string>();
         private List<int> _players = new List<int>() {-1, -1, -1, -1, -1};
         private int _discardedCards = 0;
+        
         public NewGame()
         {
             InitializeComponent();
@@ -82,6 +84,102 @@ namespace Poker
             _backButton.Location = new Point(newX, newY);
             _backButton.Font = new Font("Mongolian Baiti", heightPercent > widthPercent ? widthPercent * _backButton.Font.Size : heightPercent * _backButton.Font.Size);
 
+            //Show Cards Button
+            
+            newX = (int)Math.Round(_showCardsButton.Location.X * widthPercent);
+            newY = (int)Math.Round(_showCardsButton.Location.Y * heightPercent);
+
+            newWidth = (int)Math.Round(_showCardsButton.Size.Width * widthPercent);
+            newHeight = (int)Math.Round(_showCardsButton.Size.Height * heightPercent);
+
+            _showCardsButton.Size = new Size(newWidth, newHeight);
+            _showCardsButton.Location = new Point(newX, newY);
+            _showCardsButton.Font = new Font("Mongolian Baiti", heightPercent > widthPercent ? widthPercent * _showCardsButton.Font.Size : heightPercent * _showCardsButton.Font.Size);
+
+           
+            //Picture box 1
+
+            newX = (int)Math.Round(_cardPictureBox1.Location.X * widthPercent);
+            newY = (int)Math.Round(_cardPictureBox1.Location.Y * heightPercent);
+
+            newWidth = (int)Math.Round(_cardPictureBox1.Size.Width * widthPercent);
+            newHeight = (int)Math.Round(_cardPictureBox1.Size.Height * heightPercent);
+
+            _cardPictureBox1.Size = new Size(newWidth, newHeight);
+            _cardPictureBox1.Location = new Point(newX, newY);
+            _cardPictureBox1.Font = new Font("Mongolian Baiti", heightPercent > widthPercent ? widthPercent * _cardPictureBox1.Font.Size : heightPercent * _cardPictureBox1.Font.Size);
+
+            //Picture box 2
+
+            newX = (int)Math.Round(_cardPictureBox2.Location.X * widthPercent);
+            newY = (int)Math.Round(_cardPictureBox2.Location.Y * heightPercent);
+
+            newWidth = (int)Math.Round(_cardPictureBox2.Size.Width * widthPercent);
+            newHeight = (int)Math.Round(_cardPictureBox2.Size.Height * heightPercent);
+
+            _cardPictureBox2.Size = new Size(newWidth, newHeight);
+            _cardPictureBox2.Location = new Point(newX, newY);
+            _cardPictureBox2.Font = new Font("Mongolian Baiti", heightPercent > widthPercent ? widthPercent * _cardPictureBox2.Font.Size : heightPercent * _cardPictureBox2.Font.Size);
+
+            //Picture box 3
+
+            newX = (int)Math.Round(_cardPictureBox3.Location.X * widthPercent);
+            newY = (int)Math.Round(_cardPictureBox3.Location.Y * heightPercent);
+
+            newWidth = (int)Math.Round(_cardPictureBox3.Size.Width * widthPercent);
+            newHeight = (int)Math.Round(_cardPictureBox3.Size.Height * heightPercent);
+
+            _cardPictureBox3.Size = new Size(newWidth, newHeight);
+            _cardPictureBox3.Location = new Point(newX, newY);
+            _cardPictureBox3.Font = new Font("Mongolian Baiti", heightPercent > widthPercent ? widthPercent * _cardPictureBox3.Font.Size : heightPercent * _cardPictureBox3.Font.Size);
+
+            //Picture box 4
+
+            newX = (int)Math.Round(_cardPictureBox4.Location.X * widthPercent);
+            newY = (int)Math.Round(_cardPictureBox4.Location.Y * heightPercent);
+
+            newWidth = (int)Math.Round(_cardPictureBox4.Size.Width * widthPercent);
+            newHeight = (int)Math.Round(_cardPictureBox4.Size.Height * heightPercent);
+
+            _cardPictureBox4.Size = new Size(newWidth, newHeight);
+            _cardPictureBox4.Location = new Point(newX, newY);
+            _cardPictureBox4.Font = new Font("Mongolian Baiti", heightPercent > widthPercent ? widthPercent * _cardPictureBox4.Font.Size : heightPercent * _cardPictureBox4.Font.Size);
+
+            //Picture box 5
+
+            newX = (int)Math.Round(_cardPictureBox5.Location.X * widthPercent);
+            newY = (int)Math.Round(_cardPictureBox5.Location.Y * heightPercent);
+
+            newWidth = (int)Math.Round(_cardPictureBox5.Size.Width * widthPercent);
+            newHeight = (int)Math.Round(_cardPictureBox5.Size.Height * heightPercent);
+
+            _cardPictureBox5.Size = new Size(newWidth, newHeight);
+            _cardPictureBox5.Location = new Point(newX, newY);
+            _cardPictureBox5.Font = new Font("Mongolian Baiti", heightPercent > widthPercent ? widthPercent * _cardPictureBox5.Font.Size : heightPercent * _cardPictureBox5.Font.Size);
+
+            //Text Box Cards
+
+            newX = (int)Math.Round(_textBoxCards.Location.X * widthPercent);
+            newY = (int)Math.Round(_textBoxCards.Location.Y * heightPercent);
+
+            newWidth = (int)Math.Round(_textBoxCards.Size.Width * widthPercent);
+            newHeight = (int)Math.Round(_textBoxCards.Size.Height * heightPercent);
+
+            _textBoxCards.Size = new Size(newWidth, newHeight);
+            _textBoxCards.Location = new Point(newX, newY);
+            _textBoxCards.Font = new Font("Mongolian Baiti", heightPercent > widthPercent ? widthPercent * _textBoxCards.Font.Size : heightPercent * _textBoxCards.Font.Size);
+
+            //Text Box Cards 2
+
+            newX = (int)Math.Round(_textBoxCards2.Location.X * widthPercent);
+            newY = (int)Math.Round(_textBoxCards2.Location.Y * heightPercent);
+
+            newWidth = (int)Math.Round(_textBoxCards2.Size.Width * widthPercent);
+            newHeight = (int)Math.Round(_textBoxCards2.Size.Height * heightPercent);
+
+            _textBoxCards2.Size = new Size(newWidth, newHeight);
+            _textBoxCards2.Location = new Point(newX, newY);
+            _textBoxCards2.Font = new Font("Mongolian Baiti", heightPercent > widthPercent ? widthPercent * _textBoxCards2.Font.Size : heightPercent * _textBoxCards2.Font.Size);
         }
 
         private void ShowCards(object sender, MouseEventArgs e)
@@ -323,6 +421,21 @@ namespace Poker
             }
         }
 
+        private int NumberOfUsers()
+        {
+            int nr = 0;
+            foreach (var el in _players)
+            {
+                if (el != -1)
+                {
+                    ++nr;
+                }
+            }
+
+            return nr;
+
+        }
+
         private void ShowCardsOnChatBox(object sender, EventArgs e)
         {
 
@@ -364,8 +477,19 @@ namespace Poker
                         _textBoxCards.Text = messageParts[1] + ":" + messageParts[2];
                     else if (player == _players[1])
                         _textBoxCards2.Text = messageParts[1] + ":" + messageParts[2];
+                    if (_textBoxCards.Text != "" && _textBoxCards2.Text != "" && NumberOfUsers() >= 2)
+                    {
+                        ConcreteHandComparator handComparator = ConcreteHandComparator.GetComparator();
+                        int nr = handComparator.CompareHands(_textBoxCards.Text, _textBoxCards2.Text);
+                        if (nr == -1)
+                            _textBoxWinner.Text = "Winner Player 2";
+                        else if (nr == 1)
+                            _textBoxWinner.Text = "Winner Player 1";
+                    }
                 }
+
             }
+
             
         }
     }

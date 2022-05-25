@@ -3,6 +3,6 @@ namespace PokerGameLogic.Interfaces
 {
     interface HandComparator
     {
-        int CompareHands(PokerHand handA, PokerHand handB);
+        int CompareHands(string handA, string handB);
     }
 }

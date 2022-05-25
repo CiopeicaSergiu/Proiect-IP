@@ -44,6 +44,7 @@ namespace Poker
             this._cardPictureBox5 = new System.Windows.Forms.PictureBox();
             this._timerChatBox = new System.Windows.Forms.Timer(this.components);
             this._textBoxCards2 = new System.Windows.Forms.TextBox();
+            this._textBoxWinner = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this._cardPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._cardPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._cardPictureBox3)).BeginInit();
@@ -162,12 +163,22 @@ namespace Poker
             this._textBoxCards2.Size = new System.Drawing.Size(142, 74);
             this._textBoxCards2.TabIndex = 9;
             // 
+            // _textBoxWinner
+            // 
+            this._textBoxWinner.BackColor = System.Drawing.Color.IndianRed;
+            this._textBoxWinner.Location = new System.Drawing.Point(338, 248);
+            this._textBoxWinner.Multiline = true;
+            this._textBoxWinner.Name = "_textBoxWinner";
+            this._textBoxWinner.Size = new System.Drawing.Size(142, 74);
+            this._textBoxWinner.TabIndex = 10;
+            // 
             // NewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Poker.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this._textBoxWinner);
             this.Controls.Add(this._textBoxCards2);
             this.Controls.Add(this._cardPictureBox5);
             this.Controls.Add(this._cardPictureBox4);
@@ -207,5 +218,6 @@ namespace Poker
         private List<PokerHand> _handRanking = new List<PokerHand> {new HighCard(), new Pair(), new TwoPairs(), new ThreeOfAKind(), new Straight(), new Flush(), new FullHouse(), new FourOfAKind(),new StraightFlush(), new RoyalFlush()};
         private System.Windows.Forms.Timer _timerChatBox;
         private System.Windows.Forms.TextBox _textBoxCards2;
+        private System.Windows.Forms.TextBox _textBoxWinner;
     }
 }

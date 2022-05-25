@@ -20,24 +20,37 @@ namespace PokerGameLogic
             return _comparator;
         }
 
-        public int CompareHands(PokerHand handA, PokerHand handB)
+        public int CompareHands(string handA, string handB)
         {
             
-            int handARanking = _ranking.IndexOf(handA.HandType);
-            int handBranking = _ranking.IndexOf(handB.HandType);
-            if (handARanking > handBranking)
+            string []handARanking = handA.Split(':');
+            string []handBRanking = handB.Split(':');
+
+            int indexA = _ranking.IndexOf(handARanking[0].Replace(" ", string.Empty));
+            int indexB = _ranking.IndexOf(handBRanking[0].Replace(" ", string.Empty));
+
+
+            if (indexA > indexB)
                 return 1;
-            else if (handARanking < handBranking)
+            else if (indexA < indexB)
                 return -1;
             else
             {
-                var cardListA = handA.Hand;
-                var cardListB = handB.Hand;
-                for (int i = 0; i < cardListA.Count; i++)
-                    if (cardListA[i].CardNumber > cardListB[i].CardNumber)
+                string[] cardsA = handARanking[1].Split(',');
+                string[] cardsB = handBRanking[1].Split(',');
+
+
+                for (int i = 0; i < cardsA.Length; i++)
+                {
+                    string cardNumberA = cardsA[i].Split('-')[1];
+                    string cardNumberB = cardsB[i].Split('-')[1];
+                    if (int.Parse(cardNumberA) > int.Parse(cardNumberB))
                         return 1;
-                    else if (cardListA[i].CardNumber < cardListB[i].CardNumber)
+                    else if (int.Parse(cardNumberA) < int.Parse(cardNumberB))
                         return -1;
+
+                }
+
                 return 0;
             
             }

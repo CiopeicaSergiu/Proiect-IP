@@ -21,7 +21,7 @@ namespace PokerGameLogic
 
         public string GetCard()
         {
-            return this._suit + this._cardNumber.ToString();
+            return this._suit +"-"+this._cardNumber.ToString();
         }
 
         public int CardNumber
